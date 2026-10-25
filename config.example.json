@@ -1,0 +1,65 @@
+{
+  "plugins": {
+    "dlsite_renamer": {
+      "enabled": true,
+      "mode": "manual",
+      "executable": "C:\\Tools\\dlsite-doujin-renamer\\DLSite 同人作品重命名工具.exe",
+      "working_directory": "C:\\Tools\\dlsite-doujin-renamer"
+    },
+    "wav_to_mp3": {
+      "enabled": true,
+      "launcher": "C:\\Tools\\wav_to_mp3\\wav_to_mp3.bat",
+      "script": "C:\\Tools\\wav_to_mp3\\wav_to_mp3.ps1"
+    }
+  },
+  "processing": {
+    "order": [
+      "dlsite_renamer",
+      "wav_to_mp3"
+    ],
+    "remove_source_wav": true,
+    "dry_run": true,
+    "prefer_native_mp3": true,
+    "native_mp3_minimum_bitrate": 0,
+    "converted_mp3_bitrate": "320k",
+    "wav_after_success": "delete",
+    "delete_empty_wav_directories": true,
+    "preserve_wav_directories_when_work_has_no_mp3": true,
+    "delete_mp4": true,
+    "prefer_native_lightweight_mp3": true
+  },
+  "naming": {
+    "enabled": true,
+    "online_fallback": true,
+    "online_timeout_seconds": 15,
+    "proxy_url": "",
+    "cache_db": "C:\\Tools\\dlsite-doujin-renamer\\cache.db",
+    "external_config": "C:\\Tools\\dlsite-doujin-renamer\\config.json"
+  },
+  "extraction": {
+    "engine": "bandizip",
+    "bandizip_path": "C:\\Program Files\\Bandizip\\bz.exe",
+    "password_file": "解压密码.txt",
+    "nested_max_depth": 30,
+    "max_expanded_size_gb": 0,
+    "max_file_count": 200000,
+    "keep_original_archives": false,
+    "never_execute_sfx": true,
+    "zip_filename_code_page": 932,
+    "auto_detect_filename_encoding": true,
+    "intermediate_archive_action": "delete",
+    "nested_final_extract_in_place": true,
+    "nested_final_archive_action": "delete",
+    "final_folder_mode": "rj",
+    "collapse_packaging_directories": true,
+    "packaging_path_warning_length": 240,
+    "rj_password": {
+      "enabled": true,
+      "cache_db": "C:\\Tools\\dlsite-doujin-renamer\\cache.db",
+      "resolver": "src\\resolve_rj.py",
+      "online_fallback": true,
+      "online_timeout_seconds": 10,
+      "max_candidates": 20
+    }
+  }
+}

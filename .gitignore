@@ -1,0 +1,30 @@
+# Local configuration and passwords
+/config.json
+/gui-settings.json
+/解压密码.txt
+/passwords.txt
+.env
+.env.*
+!.env.example
+
+# Runtime files, extracted media, preserved failure scenes and backups
+/logs/
+/output/
+/quarantine/
+/work/
+*.log
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
